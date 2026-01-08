@@ -18,7 +18,7 @@ try {
     throw new Error("FIREBASE_SERVICE_ACCOUNT environment variable is missing!");
   }
 
-  // Base64 decode করে তারপর JSON parse করুন
+  // Base64 decode 
   const decodedString = Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT, 'base64').toString('utf-8');
   const serviceAccount = JSON.parse(decodedString);
 
